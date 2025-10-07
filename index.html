@@ -1,0 +1,1429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AAQ Applied Science Unit 1 Biology - Revision Sheets</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: #f3f4f6;
+            line-height: 1.6;
+        }
+
+        .header {
+            background: white;
+            border-bottom: 1px solid #e5e7eb;
+            padding: 1.5rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        h1 {
+            font-size: 1.875rem;
+            font-weight: bold;
+            color: #111827;
+            margin-bottom: 0.25rem;
+        }
+
+        .subtitle {
+            color: #6b7280;
+            font-size: 0.875rem;
+        }
+
+        .print-btn {
+            background: #2563eb;
+            color: white;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 0.375rem;
+            cursor: pointer;
+            margin-top: 1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.875rem;
+        }
+
+        .print-btn:hover {
+            background: #1d4ed8;
+        }
+
+        .tabs {
+            background: white;
+            border-bottom: 1px solid #e5e7eb;
+            padding: 0;
+        }
+
+        .tab-list {
+            display: flex;
+            gap: 0.5rem;
+            padding: 0.5rem 0;
+            overflow-x: auto;
+        }
+
+        .tab-btn {
+            padding: 0.5rem 1rem;
+            background: #f3f4f6;
+            border: none;
+            border-radius: 0.375rem 0.375rem 0 0;
+            cursor: pointer;
+            white-space: nowrap;
+            font-weight: 500;
+            color: #4b5563;
+            transition: all 0.2s;
+        }
+
+        .tab-btn:hover {
+            background: #e5e7eb;
+        }
+
+        .tab-btn.active-a {
+            background: #dbeafe;
+            color: #1e3a8a;
+            border: 1px solid #93c5fd;
+            border-bottom: none;
+        }
+
+        .tab-btn.active-b {
+            background: #dcfce7;
+            color: #14532d;
+            border: 1px solid #86efac;
+            border-bottom: none;
+        }
+
+        .tab-btn.active-c {
+            background: #f3e8ff;
+            color: #581c87;
+            border: 1px solid #d8b4fe;
+            border-bottom: none;
+        }
+
+        .tab-btn.active-cmd {
+            background: #f9fafb;
+            color: #1f2937;
+            border: 1px solid #d1d5db;
+            border-bottom: none;
+        }
+
+        .content {
+            padding: 1.5rem 0;
+        }
+
+        .content-box {
+            background: white;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            border: 2px solid #e5e7eb;
+        }
+
+        .content-box.blue {
+            background: #dbeafe;
+            border-color: #93c5fd;
+        }
+
+        .content-box.green {
+            background: #dcfce7;
+            border-color: #86efac;
+        }
+
+        .content-box.purple {
+            background: #f3e8ff;
+            border-color: #d8b4fe;
+        }
+
+        .content-box.gray {
+            background: #f9fafb;
+            border-color: #d1d5db;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .section {
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 0.5rem;
+            margin-bottom: 1rem;
+            overflow: hidden;
+        }
+
+        .section-header {
+            padding: 0.75rem 1rem;
+            background: white;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            user-select: none;
+        }
+
+        .section-header:hover {
+            background: #f9fafb;
+        }
+
+        .section-content {
+            padding: 1rem;
+            border-top: 1px solid #e5e7eb;
+            display: none;
+        }
+
+        .section-content.show {
+            display: block;
+        }
+
+        .arrow {
+            transition: transform 0.2s;
+        }
+
+        .arrow.rotate {
+            transform: rotate(180deg);
+        }
+
+        ul {
+            margin-left: 1.5rem;
+            margin-top: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        strong {
+            font-weight: 600;
+        }
+
+        .tip {
+            background: #dcfce7;
+            border-left: 4px solid #22c55e;
+            padding: 0.75rem;
+            margin: 1rem 0;
+            border-radius: 0.25rem;
+        }
+
+        .tip-title {
+            color: #14532d;
+            font-weight: 600;
+        }
+
+        .key-def {
+            background: #fef3c7;
+            border-left: 4px solid #fbbf24;
+            padding: 0.75rem;
+            margin: 1rem 0;
+            border-radius: 0.25rem;
+        }
+
+        .key-def-term {
+            color: #92400e;
+            font-weight: 600;
+        }
+
+        .example {
+            background: #dbeafe;
+            border-left: 4px solid #3b82f6;
+            padding: 0.75rem;
+            margin: 1rem 0;
+            border-radius: 0.25rem;
+        }
+
+        .example-title {
+            color: #1e3a8a;
+            font-weight: 600;
+        }
+
+        .tab-panel {
+            display: none;
+        }
+
+        .tab-panel.active {
+            display: block;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+
+        th, td {
+            border: 1px solid #e5e7eb;
+            padding: 0.5rem;
+            text-align: left;
+            font-size: 0.875rem;
+        }
+
+        th {
+            background: #f3f4f6;
+            font-weight: 600;
+        }
+
+        .formula-box {
+            background: #f3f4f6;
+            padding: 0.75rem;
+            border-radius: 0.25rem;
+            margin: 0.5rem 0;
+            font-family: monospace;
+        }
+
+        .error-box {
+            background: #fef3c7;
+            border-left: 4px solid #fbbf24;
+            padding: 0.75rem;
+            margin: 0.75rem 0;
+            border-radius: 0.25rem;
+        }
+
+        .warning-box {
+            background: #fee2e2;
+            border-left: 4px solid #ef4444;
+            padding: 0.75rem;
+            margin: 1rem 0;
+            border-radius: 0.25rem;
+        }
+
+        .warning-title {
+            color: #991b1b;
+            font-weight: 600;
+        }
+
+        .test-box {
+            background: #dbeafe;
+            border-left: 4px solid #3b82f6;
+            padding: 0.75rem;
+            margin: 0.75rem 0;
+            border-radius: 0.25rem;
+        }
+
+        .footer {
+            text-align: center;
+            color: #6b7280;
+            font-size: 0.875rem;
+            margin-top: 2rem;
+            padding: 1rem;
+        }
+
+        @media print {
+            .no-print {
+                display: none !important;
+            }
+            body {
+                background: white;
+            }
+            .content-box {
+                border: 1px solid #000;
+            }
+            .section-content {
+                display: block !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <h1>AAQ Applied Science Unit 1 Biology</h1>
+            <p class="subtitle">Interactive Revision Summary Sheets | First Assessment: May/June 2026</p>
+            <button class="print-btn no-print" onclick="window.print()">
+                🖨️ Print Current Sheet
+            </button>
+        </div>
+    </div>
+
+    <div class="tabs no-print">
+        <div class="container">
+            <div class="tab-list">
+                <button class="tab-btn active-a" onclick="showTab('A')" id="tab-A">Cells & Tissues</button>
+                <button class="tab-btn" onclick="showTab('B')" id="tab-B">Biological Molecules</button>
+                <button class="tab-btn" onclick="showTab('C')" id="tab-C">Transport & Enzymes</button>
+                <button class="tab-btn" onclick="showTab('CMD')" id="tab-CMD">Command Words</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container content">
+        <!-- Tab A: Cells & Tissues -->
+        <div id="panel-A" class="tab-panel active">
+            <div class="content-box blue">
+                <h2>Content Area A: Cells & Tissues</h2>
+                
+                <!-- Section A1.1 Prokaryotic -->
+                <div class="section">
+                    <div class="section-header" onclick="toggleSection('a11')">
+                        <span>A1.1 Prokaryotic Cells (Bacteria)</span>
+                        <span class="arrow" id="arrow-a11">▼</span>
+                    </div>
+                    <div class="section-content" id="content-a11">
+                        <div>
+                            <strong>Key organelles and structures:</strong>
+                            <ul>
+                                <li><strong>Nucleoid:</strong> Region containing circular DNA (not membrane-bound)</li>
+                                <li><strong>Plasmids:</strong> Small circular DNA molecules, can carry antibiotic resistance genes</li>
+                                <li><strong>70S ribosomes:</strong> Smaller than eukaryotic ribosomes, site of protein synthesis</li>
+                                <li><strong>Capsule:</strong> Protective layer outside cell wall, helps bacteria evade immune system</li>
+                                <li><strong>Cell wall:</strong> Made of peptidoglycan, maintains shape and prevents bursting</li>
+                                <li><strong>Cytoplasm:</strong> Gel-like substance where chemical reactions occur</li>
+                                <li><strong>Plasma membrane:</strong> Controls entry and exit of substances</li>
+                                <li><strong>Mesosomes:</strong> Infoldings of membrane, involved in respiration</li>
+                                <li><strong>Flagella:</strong> Tail-like structures for movement</li>
+                                <li><strong>Pili:</strong> Hair-like structures for attachment and DNA transfer</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <strong>Gram-positive vs Gram-negative bacteria:</strong>
+                            <ul>
+                                <li><strong>Gram-positive:</strong> Thick peptidoglycan cell wall, stains purple, more susceptible to antibiotics</li>
+                                <li><strong>Gram-negative:</strong> Thin peptidoglycan layer with outer membrane, stains pink/red, more antibiotic resistant</li>
+                            </ul>
+                        </div>
+                        <div class="tip">
+                            <span class="tip-title">💡 Application Tip:</span>
+                            <div>Prokaryotic cells are much smaller and simpler than eukaryotic cells. No membrane-bound organelles!</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section A1.1 Eukaryotic -->
+                <div class="section">
+                    <div class="section-header" onclick="toggleSection('a11euk')">
+                        <span>A1.1 Eukaryotic Cells (Animal & Plant)</span>
+                        <span class="arrow" id="arrow-a11euk">▼</span>
+                    </div>
+                    <div class="section-content" id="content-a11euk">
+                        <div>
+                            <strong>Organelles common to both animal and plant cells:</strong>
+                            <ul>
+                                <li><strong>Plasma membrane:</strong> Controls what enters/exits cell</li>
+                                <li><strong>Cytoplasm:</strong> Site of chemical reactions</li>
+                                <li><strong>Nucleus:</strong> Contains genetic material (DNA) in chromosomes, controls cell activities</li>
+                                <li><strong>Nucleolus:</strong> Inside nucleus, makes ribosomes</li>
+                                <li><strong>Rough endoplasmic reticulum (RER):</strong> Studded with ribosomes, synthesizes and transports proteins</li>
+                                <li><strong>Smooth endoplasmic reticulum (SER):</strong> Synthesizes and processes lipids</li>
+                                <li><strong>Golgi apparatus:</strong> Modifies, packages and transports proteins, makes lysosomes</li>
+                                <li><strong>Vesicles:</strong> Membrane-bound sacs for transport</li>
+                                <li><strong>Lysosomes:</strong> Contain digestive enzymes, break down worn-out organelles and pathogens</li>
+                                <li><strong>80S ribosomes:</strong> Site of protein synthesis (larger than prokaryotic)</li>
+                                <li><strong>Mitochondria:</strong> Site of aerobic respiration, produces ATP</li>
+                                <li><strong>Centrioles:</strong> Involved in cell division (animal cells)</li>
+                                <li><strong>Cilia:</strong> Hair-like structures for movement</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <strong>Plant cell specific organelles:</strong>
+                            <ul>
+                                <li><strong>Cell wall:</strong> Made of cellulose, provides strength and support</li>
+                                <li><strong>Chloroplasts:</strong> Site of photosynthesis, contain chlorophyll</li>
+                                <li><strong>Vacuole:</strong> Large permanent vacuole, stores cell sap, maintains turgor pressure</li>
+                                <li><strong>Tonoplast:</strong> Membrane surrounding vacuole</li>
+                                <li><strong>Amyloplasts:</strong> Store starch</li>
+                                <li><strong>Plasmodesmata:</strong> Channels connecting adjacent plant cells</li>
+                                <li><strong>Pits:</strong> Gaps in cell wall for transport</li>
+                            </ul>
+                        </div>
+                        <div class="tip">
+                            <span class="tip-title">💡 Application Tip:</span>
+                            <div>Plant cells have cell wall, chloroplasts and large permanent vacuole - animal cells don't!</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section A1.2 & A1.5 Magnification -->
+                <div class="section">
+                    <div class="section-header" onclick="toggleSection('a12')">
+                        <span>A1.2 & A1.5 Recognizing Cells and Magnification</span>
+                        <span class="arrow" id="arrow-a12">▼</span>
+                    </div>
+                    <div class="section-content" id="content-a12">
+                        <div>
+                            <strong>Identifying organelles:</strong>
+                            <ul>
+                                <li>Must be able to identify organelles from electron micrographs and photomicrographs</li>
+                                <li>Look for characteristic features: mitochondria (double membrane, cristae), chloroplasts (grana), nucleus (nuclear envelope)</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <strong>Magnification calculations:</strong>
+                            <div class="formula-box">
+                                <div>Magnification = Image size ÷ Actual size</div>
+                                <div>Actual size = Image size ÷ Magnification</div>
+                                <div>Image size = Actual size × Magnification</div>
+                            </div>
+                        </div>
+                        <div class="example">
+                            <span class="example-title">Example: Calculate magnification</span>
+                            <div>Image of cell is 50 mm, actual size is 0.05 mm</div>
+                            <div>Magnification = 50 ÷ 0.05 = <strong>×1000</strong></div>
+                        </div>
+                        <div class="example">
+                            <span class="example-title">Example: Calculate actual size</span>
+                            <div>Image is 40 mm, magnification is ×2000</div>
+                            <div>Actual size = 40 ÷ 2000 = <strong>0.02 mm = 20 μm</strong></div>
+                        </div>
+                        <div class="tip">
+                            <span class="tip-title">💡 Application Tip:</span>
+                            <div>Make sure all measurements in SAME units before calculating! Convert mm to μm: multiply by 1000.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section A2 Specialised Cells -->
+                <div class="section">
+                    <div class="section-header" onclick="toggleSection('a2')">
+                        <span>A2 Specialised Eukaryotic Cells</span>
+                        <span class="arrow" id="arrow-a2">▼</span>
+                    </div>
+                    <div class="section-content" id="content-a2">
+                        <div>
+                            <strong>Plant cells:</strong>
+                            <ul>
+                                <li><strong>Palisade mesophyll:</strong> Packed with chloroplasts for photosynthesis, located near upper surface to absorb maximum light</li>
+                                <li><strong>Root hair cells:</strong> Long projection increases surface area for water and mineral absorption</li>
+                                <li><strong>Xylem cells:</strong> Dead hollow tubes with lignified walls for water transport, no end walls for continuous flow</li>
+                                <li><strong>Phloem cells:</strong> Sieve tube elements (living, no nucleus) and companion cells, transport sugars (translocation)</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <strong>Animal cells:</strong>
+                            <ul>
+                                <li><strong>Sperm cells:</strong> Tail for swimming, many mitochondria for energy, acrosome with enzymes to penetrate egg</li>
+                                <li><strong>Egg cells:</strong> Large with food reserves (cytoplasm), jelly coat to prevent polyspermy</li>
+                                <li><strong>Erythrocytes (red blood cells):</strong> Biconcave shape for large surface area, no nucleus for more hemoglobin, carry oxygen</li>
+                                <li><strong>Leucocytes (white blood cells):</strong> Have nucleus, phagocytes engulf pathogens, lymphocytes produce antibodies</li>
+                                <li><strong>Thrombocytes (platelets):</strong> Cell fragments involved in blood clotting</li>
+                                <li><strong>Neurones:</strong> Long axon for transmitting impulses, dendrites to receive signals, myelin sheath for insulation</li>
+                            </ul>
+                        </div>
+                        <div class="tip">
+                            <span class="tip-title">💡 Application Tip:</span>
+                            <div>Link structure to function! Each specialization helps the cell perform its specific role more effectively.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section A3 Epithelial Tissue -->
+                <div class="section">
+                    <div class="section-header" onclick="toggleSection('a3')">
+                        <span>A3 Epithelial Tissue</span>
+                        <span class="arrow" id="arrow-a3">▼</span>
+                    </div>
+                    <div class="section-content" id="content-a3">
+                        <div>
+                            <strong>Squamous epithelium:</strong>
+                            <ul>
+                                <li>Flat, thin cells arranged in single layer</li>
+                                <li>Location: Alveolar epithelium in lungs</li>
+                                <li>Function: Very thin for efficient gas exchange by diffusion</li>
+                                <li>Short diffusion distance for oxygen and carbon dioxide</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <strong>Columnar epithelium:</strong>
+                            <ul>
+                                <li>Tall, column-shaped cells</li>
+                                <li><strong>Goblet cells:</strong> Produce mucus to trap pathogens and particles</li>
+                                <li><strong>Ciliated cells:</strong> Have cilia that waft mucus upwards away from lungs</li>
+                                <li>Function: Protect lungs from infection</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <strong>COPD (Chronic Obstructive Pulmonary Disease):</strong>
+                            <ul>
+                                <li>Damage to epithelial tissue in airways</li>
+                                <li>Cilia destroyed, mucus not removed, increased infections</li>
+                                <li>Alveoli walls break down, reduced surface area for gas exchange</li>
+                                <li>Causes: Smoking, air pollution</li>
+                            </ul>
+                        </div>
+                        <div class="tip">
+                            <span class="tip-title">💡 Application Tip:</span>
+                            <div>Understand how tissue damage leads to symptoms - destroyed cilia mean mucus builds up causing infections.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section A3 Other Tissues -->
+                <div class="section">
+                    <div class="section-header" onclick="toggleSection('a3other')">
+                        <span>A3 Endothelial, Muscular & Nervous Tissue</span>
+                        <span class="arrow" id="arrow-a3other">▼</span>
+                    </div>
+                    <div class="section-content" id="content-a3other">
+                        <div>
+                            <strong>Endothelial tissue (in blood vessels):</strong>
+                            <ul>
+                                <li>Single layer of flat cells lining blood vessels</li>
+                                <li>Smooth surface reduces friction for blood flow</li>
+                                <li>Atherosclerosis: Damage to endothelium → fatty deposits build up → narrows arteries → increases blood pressure, risk of heart attack/stroke</li>
+                                <li>Risk factors: High blood pressure, smoking, high cholesterol, lack of exercise</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <strong>Muscular tissue (skeletal muscle):</strong>
+                            <ul>
+                                <li>Contains myofibrils made of actin and myosin filaments</li>
+                                <li><strong>Fast-twitch fibres:</strong> Contract rapidly, tire quickly, use anaerobic respiration, for short bursts (sprinting)</li>
+                                <li><strong>Slow-twitch fibres:</strong> Contract slowly, resist fatigue, use aerobic respiration, many mitochondria, for endurance (marathon)</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <strong>Nervous tissue:</strong>
+                            <ul>
+                                <li><strong>Myelinated neurones:</strong> Covered in myelin sheath, faster impulse transmission (saltatory conduction), impulse jumps between nodes of Ranvier</li>
+                                <li><strong>Non-myelinated neurones:</strong> No myelin, slower impulse transmission, impulse travels along whole axon</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <strong>Nerve impulse transmission:</strong>
+                            <ul>
+                                <li>Resting potential: Inside neurone negative relative to outside (-70mV)</li>
+                                <li>Action potential: Sodium ions rush in (depolarization), then potassium ions move out (repolarization)</li>
+                                <li>Changes in membrane permeability to Na⁺ and K⁺ ions</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <strong>Synaptic transmission:</strong>
+                            <ul>
+                                <li>Impulse arrives → calcium ions enter → vesicles release neurotransmitter</li>
+                                <li>Neurotransmitter diffuses across synaptic cleft</li>
+                                <li>Binds to receptors on postsynaptic membrane</li>
+                                <li>Triggers new impulse in next neurone</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <strong>Parkinson's disease:</strong>
+                            <ul>
+                                <li>Caused by lack of dopamine (neurotransmitter) in brain</li>
+                                <li>Symptoms: Tremors, slow movement, stiffness</li>
+                                <li>Drug treatments: Agonists (mimic dopamine), antagonists (block receptors), precursors (converted to dopamine)</li>
+                            </ul>
+                        </div>
+                        <div class="tip">
+                            <span class="tip-title">💡 Application Tip:</span>
+                            <div>Know the difference between types of fibres and neurones, and be able to explain why each is suited to its function.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tab B: Biological Molecules -->
+        <div id="panel-B" class="tab-panel">
+            <div class="content-box green">
+                <h2>Content Area B: Biological Molecules</h2>
+                
+                <!-- Section B1 Water -->
+                <div class="section">
+                    <div class="section-header" onclick="toggleSection('b1')">
+                        <span>B1 Structure & Function of Water</span>
+                        <span class="arrow" id="arrow-b1">▼</span>
+                    </div>
+                    <div class="section-content" id="content-b1">
+                        <div>
+                            <strong>Structure:</strong>
+                            <ul>
+                                <li>Chemical formula: H₂O</li>
+                                <li>Contains hydrogen (H) and oxygen (O) atoms</li>
+                                <li>Covalent bonds within water molecule</li>
+                                <li>Polar molecule (δ+ on H, δ- on O)</li>
+                                <li>Hydrogen bonds form between water molecules</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <strong>Functions:</strong>
+                            <ul>
+                                <li><strong>Solvent:</strong> Dissolves ionic and polar substances, called "universal solvent"</li>
+                                <li><strong>Medium for reactions:</strong> Chemical reactions occur in aqueous solution</li>
+                                <li><strong>Transport:</strong> Transports dissolved substances in blood, xylem, phloem</li>
+                                <li><strong>pH regulation:</strong> Helps maintain constant pH</li>
+                                <li><strong>Electrolyte balance:</strong> Maintains concentrations of ions in body fluids</li>
+                                <li><strong>Temperature regulation:</strong> High specific heat capacity, stable temperature; evaporation of sweat cools body</li>
+                                <li><strong>Cohesion-tension:</strong> Water molecules stick together, allows continuous column in xylem for transpiration</li>
+                            </ul>
+                        </div>
+                        <div class="tip">
+                            <span class="tip-title">💡 Application Tip:</span>
+                            <div>Water's polarity makes it an excellent solvent for ionic and polar substances - essential for life!</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section B2 Carbohydrates -->
+                <div class="section">
+                    <div class="section-header" onclick="toggleSection('b2')">
+                        <span>B2 Structure & Function of Carbohydrates</span>
+                        <span class="arrow" id="arrow-b2">▼</span>
+                    </div>
+                    <div class="section-content" id="content-b2">
+                        <div class="key-def">
+                            <span class="key-def-term">Carbohydrates:</span> Organic molecules containing carbon, hydrogen and oxygen (general formula CₓH₂ₓOₓ)
+                        </div>
+                        <div>
+                            <strong>Monosaccharides (single sugar units):</strong>
+                            <ul>
+                                <li><strong>α-glucose and β-glucose:</strong> Isomers, 6-carbon sugars (hexoses)</li>
+                                <li><strong>Galactose:</strong> 6-carbon sugar</li>
+                                <li><strong>Fructose:</strong> 6-carbon sugar, found in fruits</li>
+                                <li><strong>Ribose and deoxyribose:</strong> 5-carbon sugars (pentoses), in RNA and DNA</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <strong>Disaccharides (two monosaccharides joined):</strong>
+                            <ul>
+                                <li><strong>Lactose:</strong> Glucose + galactose (milk sugar)</li>
+                                <li><strong>Maltose:</strong> Glucose + glucose (malt sugar)</li>
+                                <li><strong>Sucrose:</strong> Glucose + fructose (table sugar)</li>
+                                <li>Formed by condensation reaction (removes H₂O)</li>
+                                <li>Glycosidic bond formed between monosaccharides</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <strong>Polysaccharides (many monosaccharides joined):</strong>
+                            <ul>
+                                <li><strong>Starch (amylose & amylopectin):</strong> Energy storage in plants, made of α-glucose, insoluble, compact</li>
+                                <li><strong>Glycogen:</strong> Energy storage in animals (liver, muscles), highly branched α-glucose chains</li>
+                                <li><strong>Cellulose:</strong> Structural support in plant cell walls, made of β-glucose, straight chains with hydrogen bonds</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <strong>Functions:</strong>
+                            <ul>
+                                <li><strong>Energy release:</strong> Glucose respired to produce ATP</li>
+                                <li><strong>Energy storage:</strong> Starch (plants), glycogen (animals)</li>
+                                <li><strong>Structural:</strong> Cellulose in cell walls</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <strong>Tests for carbohydrates:</strong>
+                            <ul>
+                                <li><strong>Benedict's test (reducing sugars):</strong> Add Benedict's reagent, heat. Blue → brick red precipitate = positive</li>
+                                <li><strong>Iodine test (starch):</strong> Add iodine solution. Yellow/brown → blue/black = positive</li>
+                            </ul>
+                        </div>
+                        <div class="tip">
+                            <span class="tip-title">💡 Application Tip:</span>
+                            <div>Remember the difference: α-glucose makes starch/glycogen (storage), β-glucose makes cellulose (structure).</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section B3 Proteins -->
+                <div class="section">
+                    <div class="section-header" onclick="toggleSection('b3')">
+                        <span>B3 Structure & Function of Proteins</span>
+                        <span class="arrow" id="arrow-b3">▼</span>
+                    </div>
+                    <div class="section-content" id="content-b3">
+                        <div class="key-def">
+                            <span class="key-def-term">Proteins:</span> Polymers made of amino acid monomers joined by peptide bonds
+                        </div>
+                        <div>
+                            <strong>Structure levels:</strong>
+                            <ul>
+                                <li><strong>Primary structure:</strong> Sequence of amino acids in polypeptide chain, joined by peptide bonds (formed by condensation)</li>
+                                <li><strong>Secondary structure:</strong> Folding of chain into α-helices or β-pleated sheets, held by hydrogen bonds</li>
+                                <li><strong>Tertiary structure:</strong> 3D folding of polypeptide, held by:
+                                    <ul style="margin-top: 0.25rem;">
+                                        <li>Hydrogen bonds</li>
+                                        <li>Ionic interactions (between charged R groups)</li>
+                                        <li>Disulfide bridges (between sulfur atoms in cysteine)</li>
+                                        <li>Van der Waals forces</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Quaternary structure:</strong> Multiple polypeptide chains joined together (e.g., hemoglobin has 4 subunits)</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <strong>Classification:</strong>
+                            <ul>
+                                <li><strong>Globular proteins:</strong> Compact, spherical, soluble (e.g., enzymes, antibodies, hemoglobin)</li>
+                                <li><strong>Fibrous proteins:</strong> Long, narrow, insoluble, structural (e.g., collagen, keratin)</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <strong>Functions:</strong>
+                            <ul>
+                                <li><strong>Muscles:</strong> Actin and myosin for contraction</li>
+                                <li><strong>Enzymes:</strong> Biological catalysts</li>
+                                <li><strong>Antibodies:</strong> Immune defense</li>
+                                <li><strong>Antigens:</strong> Cell recognition markers</li>
+                                <li><strong>Carrier proteins:</strong> Transport substances across membranes</li>
+                                <li><strong>Hormones:</strong> Chemical messengers (e.g., insulin)</li>
+                                <li><strong>Transport:</strong> Hemoglobin carries oxygen</li>
+                                <li><strong>Growth & repair:</strong> Build and repair tissues</li>
+                                <li><strong>Blood clotting:</strong> Fibrinogen → fibrin</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <strong>Biuret test for proteins:</strong>
+                            <ul>
+                                <li>Add Biuret solution (sodium hydroxide + copper sulfate)</li>
+                                <li>Positive result: Blue → purple/lilac color</li>
+                            </ul>
+                        </div>
+                        <div class="tip">
+                            <span class="tip-title">💡 Application Tip:</span>
+                            <div>The order of structure is ALWAYS: primary → secondary → tertiary → quaternary. Each level depends on the previous.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section B4 Nucleic Acids -->
+                <div class="section">
+                    <div class="section-header" onclick="toggleSection('b4')">
+                        <span>B4 Structure & Function of Nucleic Acids</span>
+                        <span class="arrow" id="arrow-b4">▼</span>
+                    </div>
+                    <div class="section-content" id="content-b4">
+                        <div>
+                            <strong>Nucleotide structure:</strong>
+                            <ul>
+                                <li>Three components: pentose sugar, phosphate group, nitrogenous base</li>
+                                <li><strong>DNA:</strong> Deoxyribose sugar</li>
+                                <li><strong>RNA:</strong> Ribose sugar</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <strong>Nitrogenous bases:</strong>
+                            <ul>
+                                <li><strong>Purines:</strong> Adenine (A), Guanine (G) - double ring</li>
+                                <li><strong>Pyrimidines:</strong> Cytosine (C), Thymine (T in DNA), Uracil (U in RNA) - single ring</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <strong>DNA structure:</strong>
+                            <ul>
+                                <li>Double helix with two polynucleotide strands</li>
+                                <li>Sugar-phosphate backbone on outside</li>
+                                <li>Bases pair in middle: A with T (2 hydrogen bonds), C with G (3 hydrogen bonds)</li>
+                                <li>Complementary base pairing</li>
+                                <li>Antiparallel strands (run in opposite directions)</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <strong>RNA structure:</strong>
+                            <ul>
+                                <li>Single polynucleotide strand</li>
+                                <li>Contains uracil (U) instead of thymine</li>
+                                <li>Shorter than DNA</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <strong>Functions:</strong>
+                            <ul>
+                                <li><strong>DNA:</strong> Stores genetic information in genes, instructions for making proteins</li>
+                                <li><strong>RNA:</strong> Transfers information from DNA to ribosomes for protein synthesis, controls gene expression</li>
+                            </ul>
+                        </div>
+                        <div class="tip">
+                            <span class="tip-title">💡 Application Tip:</span>
+                            <div>Remember complementary base pairing: A-T (DNA) or A-U (RNA), and C-G. Purines pair with pyrimidines.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section B5 Lipids -->
+                <div class="section">
+                    <div class="section-header" onclick="toggleSection('b5')">
+                        <span>B5 Structure & Function of Lipids</span>
+                        <span class="arrow" id="arrow-b5">▼</span>
+                    </div>
+                    <div class="section-content" id="content-b5">
+                        <div class="key-def">
+                            <span class="key-def-term">Lipids:</span> Organic molecules containing carbon, hydrogen and oxygen (less oxygen than carbohydrates)
+                        </div>
+                        <div>
+                            <strong>Structure:</strong>
+                            <ul>
+                                <li>Made from fatty acids and glycerol</li>
+                                <li><strong>Saturated fats:</strong> No C=C double bonds, solid at room temperature (animal fats)</li>
+                                <li><strong>Unsaturated fats:</strong> Have C=C double bonds, liquid at room temperature (plant oils)</li>
+                                <li><strong>Triglycerides:</strong> 1 glycerol + 3 fatty acids, joined by esterification (condensation)</li>
+                                <li><strong>Diglycerides:</strong> 1 glycerol + 2 fatty acids</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <strong>Functions:</strong>
+                            <ul>
+                                <li><strong>Energy source:</strong> Provide more than twice the energy per gram than carbohydrates</li>
+                                <li><strong>Energy storage:</strong> Stored as adipose tissue</li>
+                                <li><strong>Insulation:</strong> Layer under skin reduces heat loss</li>
+                                <li><strong>Protection:</strong> Cushions organs</li>
+                                <li><strong>Cell membranes:</strong> Phospholipids form bilayer</li>
+                                <li><strong>Steroid hormones:</strong> E.g., testosterone, estrogen</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <strong>Emulsion test for lipids:</strong>
+                            <ul>
+                                <li>Add ethanol to sample, shake, then add water</li>
+                                <li>Positive result: Cloudy white emulsion forms</li>
+                            </ul>
+                        </div>
+                        <div class="tip">
+                            <span class="tip-title">💡 Application Tip:</span>
+                            <div>Lipids are hydrophobic (water-repelling). Phospholipids have hydrophilic heads and hydrophobic tails - perfect for membranes!</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tab C: Transport & Enzymes -->
+        <div id="panel-C" class="tab-panel">
+            <div class="content-box purple">
+                <h2>Content Area C: Transport & Enzymes</h2>
+                
+                <!-- Section C1 Cell Membrane & Transport -->
+                <div class="section">
+                    <div class="section-header" onclick="toggleSection('c1')">
+                        <span>C1 Cell Membrane & Transport</span>
+                        <span class="arrow" id="arrow-c1">▼</span>
+                    </div>
+                    <div class="section-content" id="content-c1">
+                        <div>
+                            <strong>Fluid mosaic model of cell membrane:</strong>
+                            <ul>
+                                <li><strong>Phospholipid bilayer:</strong> Hydrophilic heads face outwards, hydrophobic tails face inwards</li>
+                                <li><strong>Proteins:</strong> Intrinsic (span membrane), extrinsic (on surface)</li>
+                                <li><strong>Cholesterol:</strong> Adds stability and regulates fluidity</li>
+                                <li><strong>Glycoproteins & glycolipids:</strong> Cell recognition and signaling</li>
+                                <li>"Fluid" because phospholipids can move, "mosaic" because of scattered proteins</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <strong>Transport methods:</strong>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Method</th>
+                                        <th>Energy?</th>
+                                        <th>Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Diffusion</td>
+                                        <td>No (passive)</td>
+                                        <td>Movement from high to low concentration down gradient</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Facilitated diffusion</td>
+                                        <td>No (passive)</td>
+                                        <td>Through protein channels/carriers, down gradient</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Osmosis</td>
+                                        <td>No (passive)</td>
+                                        <td>Diffusion of water through partially permeable membrane</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Active transport</td>
+                                        <td>Yes (ATP)</td>
+                                        <td>Through carrier proteins, against gradient, requires ATP</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Endocytosis</td>
+                                        <td>Yes (ATP)</td>
+                                        <td>Bulk transport into cell, membrane folds inwards</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Exocytosis</td>
+                                        <td>Yes (ATP)</td>
+                                        <td>Bulk transport out of cell, vesicle fuses with membrane</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div>
+                            <strong>Surface area to volume ratio:</strong>
+                            <ul>
+                                <li>As organism gets larger, SA:V ratio decreases</li>
+                                <li>Small organisms: High SA:V, sufficient for diffusion alone</li>
+                                <li>Large organisms: Low SA:V, need specialized transport systems (lungs, circulatory system)</li>
+                                <li>Adaptations to increase SA: Villi in intestine, alveoli in lungs, root hairs</li>
+                            </ul>
+                        </div>
+                        <div class="tip">
+                            <span class="tip-title">💡 Application Tip:</span>
+                            <div>Passive transport needs NO energy, active transport needs ATP. Remember: Active = ATP!</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section C2 Enzymes -->
+                <div class="section">
+                    <div class="section-header" onclick="toggleSection('c2')">
+                        <span>C2 Enzymes as Biological Catalysts</span>
+                        <span class="arrow" id="arrow-c2">▼</span>
+                    </div>
+                    <div class="section-content" id="content-c2">
+                        <div class="key-def">
+                            <span class="key-def-term">Enzyme:</span> Biological catalyst that speeds up rate of reaction without being used up, made of protein
+                        </div>
+                        <div class="key-def">
+                            <span class="key-def-term">Active site:</span> Region on enzyme with specific tertiary structure complementary to substrate
+                        </div>
+                        <div class="key-def">
+                            <span class="key-def-term">Substrate:</span> Molecule that enzyme acts upon
+                        </div>
+                        <div>
+                            <strong>Structure:</strong>
+                            <ul>
+                                <li>Globular proteins with specific tertiary structure</li>
+                                <li>Active site has specific shape complementary to substrate</li>
+                                <li>If shape changes (denaturation), enzyme no longer works</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <strong>How enzymes work:</strong>
+                            <ul>
+                                <li><strong>Collision theory:</strong> Enzyme and substrate must collide with correct orientation and sufficient energy</li>
+                                <li><strong>Lock and key theory:</strong> Active site is rigid, exactly complementary to substrate shape</li>
+                                <li><strong>Enzyme-substrate complex:</strong> Substrate binds to active site, forming ES complex</li>
+                                <li><strong>Products formed:</strong> Bonds broken/made, products released, enzyme unchanged and can be reused</li>
+                                <li><strong>Specificity:</strong> Each enzyme catalyzes one specific reaction due to unique active site shape</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <strong>Measuring enzyme activity:</strong>
+                            <ul>
+                                <li><strong>Initial rate of reaction:</strong> Rate at start when substrate concentration is high</li>
+                                <li>Measure product formed OR substrate used per unit time</li>
+                                <li>Graph: Product/time, steepest part at start = initial rate</li>
+                            </ul>
+                        </div>
+                        <div class="tip">
+                            <span class="tip-title">💡 Application Tip:</span>
+                            <div>Enzymes are NOT used up - they can be used again and again. They just speed up reactions that would happen anyway!</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section C2.3 Factors Affecting Enzymes -->
+                <div class="section">
+                    <div class="section-header" onclick="toggleSection('c23')">
+                        <span>C2.3 Factors Affecting Enzyme Activity</span>
+                        <span class="arrow" id="arrow-c23">▼</span>
+                    </div>
+                    <div class="section-content" id="content-c23">
+                        <div>
+                            <strong>Temperature:</strong>
+                            <ul>
+                                <li><strong>Low temp:</strong> Slow reaction, low kinetic energy, fewer successful collisions</li>
+                                <li><strong>Optimum temp:</strong> Fastest reaction rate (usually 37°C for human enzymes)</li>
+                                <li><strong>Above optimum:</strong> Enzyme denatures, active site shape changes permanently, enzyme stops working</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <strong>pH:</strong>
+                            <ul>
+                                <li>Each enzyme has optimum pH</li>
+                                <li>Too far from optimum: Hydrogen bonds break, active site shape changes, enzyme denatures</li>
+                                <li>Examples: Pepsin (stomach) optimum pH 2, amylase optimum pH 7</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <strong>Substrate concentration:</strong>
+                            <ul>
+                                <li><strong>Low concentration:</strong> Rate increases as concentration increases, more collisions</li>
+                                <li><strong>High concentration:</strong> Rate plateaus, all active sites occupied, enzyme concentration is limiting factor</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <strong>Enzyme concentration:</strong>
+                            <ul>
+                                <li>More enzyme = faster reaction (if substrate available)</li>
+                                <li>Direct relationship: Double enzyme = double rate</li>
+                                <li>Only if substrate concentration is not limiting</li>
+                            </ul>
+                        </div>
+                        <div class="example">
+                            <span class="example-title">Example: Explain temperature effect on enzyme</span>
+                            <div><strong>Below optimum:</strong> Increase in temperature increases rate because molecules have more kinetic energy, more frequent successful collisions between enzyme and substrate.</div>
+                            <div style="margin-top: 0.5rem;"><strong>Above optimum:</strong> Enzyme denatures because high temperature breaks hydrogen bonds in tertiary structure, changing active site shape so substrate no longer fits.</div>
+                        </div>
+                        <div class="tip">
+                            <span class="tip-title">💡 Application Tip:</span>
+                            <div>Denatured = permanently damaged. Remember: Temperature and pH extremes denature enzymes!</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section C3 Homeostasis -->
+                <div class="section">
+                    <div class="section-header" onclick="toggleSection('c3')">
+                        <span>C3 Homeostasis</span>
+                        <span class="arrow" id="arrow-c3">▼</span>
+                    </div>
+                    <div class="section-content" id="content-c3">
+                        <div class="key-def">
+                            <span class="key-def-term">Homeostasis:</span> Maintenance of constant internal environment despite external changes
+                        </div>
+                        <div>
+                            <strong>Purpose of homeostasis:</strong>
+                            <ul>
+                                <li>Maintain optimum conditions for enzyme action and cell function</li>
+                                <li>Keep variables at set point (temperature, pH, blood glucose, water potential)</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <strong>Components of control systems:</strong>
+                            <ul>
+                                <li><strong>Stimulus:</strong> Change in internal/external environment</li>
+                                <li><strong>Receptors/sensors:</strong> Detect changes</li>
+                                <li><strong>Control centre:</strong> Processes information, coordinates response</li>
+                                <li><strong>Effectors:</strong> Muscles or glands that bring about response</li>
+                                <li><strong>Feedback:</strong> Information about level of variable</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <strong>Negative feedback:</strong>
+                            <ul>
+                                <li>Most common type</li>
+                                <li>Response reverses the change to restore normal level</li>
+                                <li>Examples: Blood pressure, osmoregulation (body fluids), gas concentration (O₂/CO₂), blood sugar levels</li>
+                            </ul>
+                        </div>
+                        <div class="example">
+                            <span class="example-title">Example: Blood glucose regulation (negative feedback)</span>
+                            <div><strong>High blood glucose:</strong> Detected by pancreas → insulin released → cells take up glucose → glucose stored as glycogen → blood glucose decreases</div>
+                            <div style="margin-top: 0.5rem;"><strong>Low blood glucose:</strong> Detected by pancreas → glucagon released → glycogen broken down to glucose → blood glucose increases</div>
+                        </div>
+                        <div>
+                            <strong>Positive feedback:</strong>
+                            <ul>
+                                <li>Response enhances/amplifies the change</li>
+                                <li>Less common, usually specific situations</li>
+                                <li><strong>Blood clotting:</strong> Platelets trigger more platelets to aggregate</li>
+                                <li><strong>Labour contractions:</strong> Oxytocin causes contractions, which stimulates more oxytocin release</li>
+                            </ul>
+                        </div>
+                        <div class="tip">
+                            <span class="tip-title">💡 Application Tip:</span>
+                            <div>Negative feedback = reverses change. Positive feedback = amplifies change. Most homeostasis uses negative feedback!</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section C3.4 Nervous & Endocrine -->
+                <div class="section">
+                    <div class="section-header" onclick="toggleSection('c34')">
+                        <span>C3.4 Nervous & Endocrine System Interaction</span>
+                        <span class="arrow" id="arrow-c34">▼</span>
+                    </div>
+                    <div class="section-content" id="content-c34">
+                        <div>
+                            <strong>Autonomic nervous system:</strong>
+                            <ul>
+                                <li>Controls involuntary actions (breathing, heartbeat)</li>
+                                <li>Not under conscious control</li>
+                                <li>Works continuously</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <strong>Adrenal glands (fight or flight response):</strong>
+                            <ul>
+                                <li>Release adrenaline hormone in stress/danger</li>
+                                <li>Effects: Increases heart rate, breathing rate, blood glucose, diverts blood to muscles</li>
+                                <li>Prepares body for action</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <strong>Hypothalamus:</strong>
+                            <ul>
+                                <li>Link between nervous and endocrine systems</li>
+                                <li>Regulates temperature, hunger, thirst</li>
+                                <li>Controls pituitary gland (master gland)</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <strong>Peripheral nervous system:</strong>
+                            <ul>
+                                <li>Relays information between body and central nervous system (CNS)</li>
+                                <li>Sensory neurones carry impulses TO CNS</li>
+                                <li>Motor neurones carry impulses FROM CNS to effectors</li>
+                            </ul>
+                        </div>
+                        <div class="tip">
+                            <span class="tip-title">💡 Application Tip:</span>
+                            <div>Nervous system = fast, short-lived, electrical impulses. Endocrine system = slower, longer-lasting, hormones in blood.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section C3.5 Disturbance of Homeostasis -->
+                <div class="section">
+                    <div class="section-header" onclick="toggleSection('c35')">
+                        <span>C3.5 Disturbance of Homeostasis</span>
+                        <span class="arrow" id="arrow-c35">▼</span>
+                    </div>
+                    <div class="section-content" id="content-c35">
+                        <div>
+                            <strong>Ageing effects:</strong>
+                            <ul>
+                                <li>Feedback loops become less effective</li>
+                                <li>Heart failure: Heart unable to pump blood effectively</li>
+                                <li>Type 2 diabetes: Cells become resistant to insulin, high blood glucose</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <strong>Lifestyle influences on homeostasis:</strong>
+                            <ul>
+                                <li><strong>Nutrition:</strong> Poor diet → obesity, diabetes, high blood pressure</li>
+                                <li><strong>Physical activity:</strong> Exercise improves cardiovascular health, reduces diabetes risk</li>
+                                <li><strong>Drug/alcohol abuse:</strong> Damages organs (liver, heart, brain), disrupts homeostasis, addiction affects nervous system</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <strong>Consequences:</strong>
+                            <ul>
+                                <li>Body cannot maintain constant internal environment</li>
+                                <li>Increased risk of disease</li>
+                                <li>Reduced life expectancy</li>
+                            </ul>
+                        </div>
+                        <div class="tip">
+                            <span class="tip-title">💡 Application Tip:</span>
+                            <div>Lifestyle choices directly affect homeostasis. Healthy lifestyle = effective homeostasis = reduced disease risk!</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tab CMD: Command Words -->
+        <div id="panel-CMD" class="tab-panel">
+            <div class="content-box gray">
+                <h2>Command Words</h2>
+                
+                <!-- Section CMD1 Critical Command Words -->
+                <div class="section">
+                    <div class="section-header" onclick="toggleSection('cmd1')">
+                        <span>Critical Command Words - Exact Definitions</span>
+                        <span class="arrow" id="arrow-cmd1">▼</span>
+                    </div>
+                    <div class="section-content" id="content-cmd1">
+                        <div class="warning-box">
+                            <span class="warning-title">⚠️ These definitions are from official Pearson documentation</span>
+                            <div style="font-size: 0.875rem; margin-top: 0.25rem;">Understanding these precisely is essential for exam success</div>
+                        </div>
+
+                        <div style="background: white; border: 1px solid #e5e7eb; padding: 0.75rem; margin: 1rem 0; border-radius: 0.25rem;">
+                            <strong style="font-size: 1.125rem;">Calculate</strong>
+                            <p style="margin-top: 0.25rem;">Obtain numerical answer, showing relevant working and appropriate units where required</p>
+                            <div style="color: #6b7280; font-size: 0.875rem; margin-top: 0.5rem;">Always show working. Always include units.</div>
+                        </div>
+
+                        <div style="background: white; border: 1px solid #e5e7eb; padding: 0.75rem; margin: 1rem 0; border-radius: 0.25rem;">
+                            <strong style="font-size: 1.125rem;">Compare</strong>
+                            <p style="margin-top: 0.25rem;">Look for similarities AND differences. Answer must relate to both/all things mentioned</p>
+                            <div style="color: #6b7280; font-size: 0.875rem; margin-top: 0.5rem;">Must discuss BOTH items. Use "whereas", "however", "in contrast".</div>
+                        </div>
+
+                        <div style="background: white; border: 1px solid #e5e7eb; padding: 0.75rem; margin: 1rem 0; border-radius: 0.25rem;">
+                            <strong style="font-size: 1.125rem;">Describe</strong>
+                            <p style="margin-top: 0.25rem;">Give an account of something. Statements need to be developed but don't need justification</p>
+                            <div style="color: #6b7280; font-size: 0.875rem; margin-top: 0.5rem;">Say WHAT happens, not WHY. No reasoning needed.</div>
+                        </div>
+
+                        <div style="background: white; border: 1px solid #e5e7eb; padding: 0.75rem; margin: 1rem 0; border-radius: 0.25rem;">
+                            <strong style="font-size: 1.125rem;">Explain</strong>
+                            <p style="margin-top: 0.25rem;">Requires justification/exemplification. Must contain reasoning. Mark scheme:</p>
+                            <ul style="margin-top: 0.25rem; font-size: 0.875rem;">
+                                <li>1 mark: Identification of point</li>
+                                <li>2 marks: Identification + linked justification</li>
+                                <li>3 marks: Identification + two linked justifications OR further development</li>
+                                <li>4 marks: Two identifications with expansions OR one with three detailed points</li>
+                            </ul>
+                            <div style="color: #6b7280; font-size: 0.875rem; margin-top: 0.5rem;">Use "because", "this is due to", "as a result". Link statements.</div>
+                        </div>
+
+                        <div style="background: white; border: 1px solid #e5e7eb; padding: 0.75rem; margin: 1rem 0; border-radius: 0.25rem;">
+                            <strong style="font-size: 1.125rem;">Evaluate</strong>
+                            <p style="margin-top: 0.25rem;">Review information, bring together to form conclusion. Use evidence including strengths, weaknesses, alternatives. Make supported judgement</p>
+                            <div style="color: #6b7280; font-size: 0.875rem; margin-top: 0.5rem;">Consider multiple perspectives. Make judgements. Support with evidence.</div>
+                        </div>
+
+                        <div style="background: white; border: 1px solid #e5e7eb; padding: 0.75rem; margin: 1rem 0; border-radius: 0.25rem;">
+                            <strong style="font-size: 1.125rem;">Discuss</strong>
+                            <p style="margin-top: 0.25rem;">Identify the issue. Explore all aspects. Investigate by reasoning or argument. Does NOT require conclusion</p>
+                            <div style="color: #6b7280; font-size: 0.875rem; margin-top: 0.5rem;">Present multiple viewpoints. No single answer required.</div>
+                        </div>
+
+                        <div style="background: white; border: 1px solid #e5e7eb; padding: 0.75rem; margin: 1rem 0; border-radius: 0.25rem;">
+                            <strong style="font-size: 1.125rem;">Deduce</strong>
+                            <p style="margin-top: 0.25rem;">Draw/reach conclusion(s) from the information provided</p>
+                            <div style="color: #6b7280; font-size: 0.875rem; margin-top: 0.5rem;">Use the information given to work out the answer.</div>
+                        </div>
+
+                        <div style="background: white; border: 1px solid #e5e7eb; padding: 0.75rem; margin: 1rem 0; border-radius: 0.25rem;">
+                            <strong style="font-size: 1.125rem;">State what is meant by</strong>
+                            <p style="margin-top: 0.25rem;">Provide the accepted definition of a term</p>
+                            <div style="color: #6b7280; font-size: 0.875rem; margin-top: 0.5rem;">Use exact wording from specification/mark schemes.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section CMD2 Common Errors -->
+                <div class="section">
+                    <div class="section-header" onclick="toggleSection('cmd2')">
+                        <span>Common Biology Exam Errors</span>
+                        <span class="arrow" id="arrow-cmd2">▼</span>
+                    </div>
+                    <div class="section-content" id="content-cmd2">
+                        <div class="error-box">
+                            <strong>❌ Error #1: Insufficient detail in explanations</strong>
+                            <p style="margin-top: 0.25rem; font-size: 0.875rem;">Students identify what happens but don't explain WHY.</p>
+                            <p style="margin-top: 0.25rem; font-size: 0.875rem; font-weight: 600;">✓ Fix: Always link your points with "because", "this causes", "as a result"</p>
+                        </div>
+
+                        <div class="error-box">
+                            <strong>❌ Error #2: Confusing similar terms</strong>
+                            <p style="margin-top: 0.25rem; font-size: 0.875rem;">E.g., prokaryotic/eukaryotic, DNA/RNA, diffusion/osmosis, mitosis/meiosis</p>
+                            <p style="margin-top: 0.25rem; font-size: 0.875rem; font-weight: 600;">✓ Fix: Learn precise definitions. Create comparison tables to see differences clearly.</p>
+                        </div>
+
+                        <div class="error-box">
+                            <strong>❌ Error #3: Not linking structure to function</strong>
+                            <p style="margin-top: 0.25rem; font-size: 0.875rem;">Describing structure without explaining how it helps the function.</p>
+                            <p style="margin-top: 0.25rem; font-size: 0.875rem; font-weight: 600;">✓ Fix: For every structure mentioned, explain how it helps perform the function.</p>
+                        </div>
+
+                        <div class="error-box">
+                            <strong>❌ Error #4: Vague enzyme explanations</strong>
+                            <p style="margin-top: 0.25rem; font-size: 0.875rem;">Saying "enzyme stops working" instead of "enzyme denatures"</p>
+                            <p style="margin-top: 0.25rem; font-size: 0.875rem; font-weight: 600;">✓ Fix: Use precise terminology: denature, active site, complementary, enzyme-substrate complex</p>
+                        </div>
+
+                        <div class="error-box">
+                            <strong>❌ Error #5: Missing biological molecule tests</strong>
+                            <p style="margin-top: 0.25rem; font-size: 0.875rem;">Forgetting reagents, colors, or conditions for Benedict's, Biuret, Iodine, Emulsion tests</p>
+                            <p style="margin-top: 0.25rem; font-size: 0.875rem; font-weight: 600;">✓ Fix: Make flashcards for each test: reagent → procedure → positive result color</p>
+                        </div>
+
+                        <div class="error-box">
+                            <strong>❌ Error #6: Magnification calculation errors</strong>
+                            <p style="margin-top: 0.25rem; font-size: 0.875rem;">Units not matching, wrong formula used, no working shown</p>
+                            <p style="margin-top: 0.25rem; font-size: 0.875rem; font-weight: 600;">✓ Fix: Convert ALL to same units first. Use triangle: Magnification = Image / Actual</p>
+                        </div>
+
+                        <div class="error-box">
+                            <strong>❌ Error #7: Incomplete homeostasis descriptions</strong>
+                            <p style="margin-top: 0.25rem; font-size: 0.875rem;">Missing parts of the feedback loop (receptor, control centre, effector)</p>
+                            <p style="margin-top: 0.25rem; font-size: 0.875rem; font-weight: 600;">✓ Fix: Always include: stimulus → receptor → control centre → effector → response</p>
+                        </div>
+
+                        <div class="error-box">
+                            <strong>❌ Error #8: Not identifying cell types from images</strong>
+                            <p style="margin-top: 0.25rem; font-size: 0.875rem;">Unable to recognize organelles in electron micrographs</p>
+                            <p style="margin-top: 0.25rem; font-size: 0.875rem; font-weight: 600;">✓ Fix: Practice with lots of images. Learn characteristic features of each organelle.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section CMD3 Key Tests -->
+                <div class="section">
+                    <div class="section-header" onclick="toggleSection('cmd3')">
+                        <span>Key Biology Tests Summary</span>
+                        <span class="arrow" id="arrow-cmd3">▼</span>
+                    </div>
+                    <div class="section-content" id="content-cmd3">
+                        <div class="test-box">
+                            <strong>Benedict's Test (Reducing Sugars)</strong>
+                            <ul style="margin-top: 0.5rem; font-size: 0.875rem;">
+                                <li><strong>Add:</strong> Benedict's reagent to sample</li>
+                                <li><strong>Heat:</strong> In water bath</li>
+                                <li><strong>Positive:</strong> Blue → green → yellow → orange → brick red precipitate</li>
+                            </ul>
+                        </div>
+
+                        <div class="test-box">
+                            <strong>Iodine Test (Starch)</strong>
+                            <ul style="margin-top: 0.5rem; font-size: 0.875rem;">
+                                <li><strong>Add:</strong> Iodine solution to sample</li>
+                                <li><strong>Positive:</strong> Yellow/brown → blue/black color</li>
+                            </ul>
+                        </div>
+
+                        <div class="test-box">
+                            <strong>Biuret Test (Proteins)</strong>
+                            <ul style="margin-top: 0.5rem; font-size: 0.875rem;">
+                                <li><strong>Add:</strong> Sodium hydroxide, then copper sulfate solution</li>
+                                <li><strong>Positive:</strong> Blue → purple/lilac color</li>
+                            </ul>
+                        </div>
+
+                        <div class="test-box">
+                            <strong>Emulsion Test (Lipids)</strong>
+                            <ul style="margin-top: 0.5rem; font-size: 0.875rem;">
+                                <li><strong>Add:</strong> Ethanol to sample and shake</li>
+                                <li><strong>Add:</strong> Water</li>
+                                <li><strong>Positive:</strong> Cloudy white emulsion forms</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer no-print">
+        <p>Click sections to expand/collapse • Use Print button for hard copy</p>
+        <p>Based on Pearson AAQ Applied Science Unit 1 specification and mark scheme language</p>
+    </div>
+
+    <script>
+        function showTab(tabId) {
+            // Hide all panels
+            const panels = document.querySelectorAll('.tab-panel');
+            panels.forEach(panel => panel.classList.remove('active'));
+            
+            // Show selected panel
+            document.getElementById('panel-' + tabId).classList.add('active');
+            
+            // Update button styles
+            const buttons = document.querySelectorAll('.tab-btn');
+            buttons.forEach(btn => {
+                btn.className = 'tab-btn';
+            });
+            
+            // Style active button
+            const activeBtn = document.getElementById('tab-' + tabId);
+            if (tabId === 'A') activeBtn.className = 'tab-btn active-a';
+            else if (tabId === 'B') activeBtn.className = 'tab-btn active-b';
+            else if (tabId === 'C') activeBtn.className = 'tab-btn active-c';
+            else activeBtn.className = 'tab-btn active-cmd';
+        }
+
+        function toggleSection(sectionId) {
+            const content = document.getElementById('content-' + sectionId);
+            const arrow = document.getElementById('arrow-' + sectionId);
+            
+            if (content.classList.contains('show')) {
+                content.classList.remove('show');
+                arrow.classList.remove('rotate');
+                arrow.textContent = '▼';
+            } else {
+                content.classList.add('show');
+                arrow.classList.add('rotate');
+                arrow.textContent = '▲';
+            }
+        }
+    </script>
+</body>
+</html>
